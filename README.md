@@ -1,1 +1,25 @@
 # celery_template_worker
+
+###### created by Weber Huang
+
+```bash
+$ git clone https://github.com/Weber12321/celery_template_worker.git
+
+$ cd celery_template_worker
+```
+
+```bash
+$ vim .env
+
+BROKER=redis://<ip>:6379
+```
+
+```bash
+$ docker build -t ychuang/celery_app_1 --no-cache .
+
+# test without detached
+$ docker run --name celery_cluster_1 ychuang/celery_app_1
+
+# now send a message from remote client see the result
+```
+
