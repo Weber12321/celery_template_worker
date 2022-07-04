@@ -1,0 +1,1 @@
+# celery_template_worker
