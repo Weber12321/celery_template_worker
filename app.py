@@ -7,7 +7,8 @@ load_dotenv('.env')
 
 app = Celery(
     name='proj_A',
-    broker=os.getenv('BROKER')
+    broker=os.getenv('REDIS'),
+    backend=os.getenv('REDIS')
 )
 
 app.conf.task_routes = {
@@ -18,4 +19,4 @@ app.conf.task_routes = {
 
 @app.task
 def sample_task(value):
-    print(value, "worker_1")
+    print(value, "worker_1", "183")

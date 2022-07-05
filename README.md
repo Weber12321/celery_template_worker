@@ -9,9 +9,11 @@ $ cd celery_template_worker
 ```
 
 ```bash
+$ touch .env
+
 $ vim .env
 
-BROKER=redis://<ip>:6379
+REDIS=redis://<ip>:6379/0
 ```
 
 ```bash
