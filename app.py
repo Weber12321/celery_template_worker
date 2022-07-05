@@ -1,9 +1,6 @@
 import os
 
-from dotenv import load_dotenv
 from celery import Celery
-
-load_dotenv('.env')
 
 app = Celery(
     name='proj_A',
